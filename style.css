@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+button {
+  background-color: #ff1111;
+  color: white;
+  box-shadow: 0 0 8px 1px red;
+  border: none;
+  width: 50px;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ba0202;
+}
+
+h1 {
+  display: inline-block; /* Penting agar transform bekerja maksimal */
+  animation: jedagjedug 0.5s infinite;
+}
+
+@keyframes jedagjedug {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  50% {
+    transform: scale(1.2) translateY(-10px); /* Membesar & melompat */
+    filter: brightness(150%); /* Efek kilatan cahaya */
+    color: #ff0055; /* Opsional: ubah warna saat hentakan */
+  }
+}
